@@ -33,7 +33,7 @@ private static ResourceBundle rb = ResourceBundle.getBundle("application");
         }
         @AfterEach
         public void closeJira() {
-            Selenide.closeWebDriver();
+        Selenide.closeWebDriver();
         }
 }
 

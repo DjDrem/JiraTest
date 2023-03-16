@@ -1,9 +1,6 @@
 import com.codeborne.selenide.Condition;
 import hooks.WebHooks;
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,6 +20,11 @@ import static pageSteps.testSeleniumSteps.statusCheck;
 
 @Feature("JiraTest")
 public class jiraTest extends WebHooks {
+
+    @Attachment(value = "Page screenshot", type = "image/png")
+    public byte[] saveScreenshot(byte[] screenShot) {
+        return screenShot;
+    }
     private static ResourceBundle rb = ResourceBundle.getBundle("application");
     @Test
     @DisplayName("Тест авторизации jira")
